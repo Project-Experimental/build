@@ -21,6 +21,7 @@ include_directories(
 	cmsis_f7/Include
 	rtos/include
 	rtos/portable/GCC/ARM_CM7/r0p1
+	freex/Include
 	app
 )
 
@@ -36,6 +37,10 @@ add_executable(app
 	rtos/list.c
 	rtos/timers.c
 
+	freex/Source/rtos/kernel.cpp
+	freex/Source/rtos/task.cpp
+
+	app/stub.cpp
 	app/main.cpp
 )
 
